@@ -30,7 +30,9 @@ RUN curl -sSL https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64
     conda update conda && \
     conda clean --all --yes
 
-RUN conda install -c conda-forge -c pytorch -c krinsman jupyterhub jupyterlab notebook nbgitpuller matplotlib tensorflow \
+RUN conda install -c conda-forge -c pytorch -c krinsman jupyterhub jupyterlab \
+                                                        jupyterhub-ldapauthenticator \
+                                                        notebook nbgitpuller matplotlib tensorflow \
                                                         pytorch torchvision torchaudio torchtext \
                                                         xeus-cling \
                                                         ipywidgets beakerx \
